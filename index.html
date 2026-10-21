@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusBay — IIM Indore Marketplace</title>
+  <meta name="description" content="The trusted campus marketplace for IIM Indore students." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <span class="brand-mark">C</span>
+        <span>campus<span>bay</span></span>
+      </a>
+      <div class="campus-pill"><span class="pulse"></span> IIM Indore campus</div>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <button class="nav-item active" data-view="buy"><span>⌂</span> Browse products</button>
+        <button class="nav-item" data-view="sell"><span>＋</span> Sell an item</button>
+        <button class="nav-item" data-view="orders"><span>◷</span> My orders</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="trust-card"><span class="shield">✦</span><div><strong>Campus trusted</strong><small>Only verified IIM Indore users</small></div></div>
+        <div class="profile"><div class="avatar">AK</div><div><strong>Arjun Kapoor</strong><small>PGP 2025 · Block C</small></div><button aria-label="More profile options">•••</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">C</span> campus<span>bay</span></div>
+        <div class="top-actions"><button class="icon-button" aria-label="Notifications">♧<i></i></button><button class="round-avatar">AK</button></div>
+      </header>
+
+      <section id="buy-view" class="view active-view">
+        <div class="hero">
+          <div><p class="eyebrow">YOUR CAMPUS. YOUR MARKET.</p><h1>Find it on campus.<br><em>Live better.</em></h1><p class="hero-copy">Buy and sell what you need with people you already trust at IIM Indore.</p></div>
+          <div class="hero-art"><span class="sparkle one">✦</span><span class="sparkle two">✦</span><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="hero-card card-back">♢</div><div class="hero-card card-front"><span>AVAILABLE<br>ON CAMPUS</span><strong>↗</strong></div></div>
+        </div>
+        <div class="section-heading"><div><p class="eyebrow">EXPLORE THE CAMPUS</p><h2>What are you looking for?</h2></div><button class="text-button" data-view="buy">View all <span>↗</span></button></div>
+        <div class="category-row">
+          <button class="category active" data-category="All"><span class="cat-icon all">✦</span><strong>All items</strong><small>124 listings</small></button>
+          <button class="category" data-category="Electronics"><span class="cat-icon blue">⌁</span><strong>Electronics</strong><small>32 listings</small></button>
+          <button class="category" data-category="Books"><span class="cat-icon orange">▤</span><strong>Books & notes</strong><small>41 listings</small></button>
+          <button class="category" data-category="Furniture"><span class="cat-icon yellow">⌂</span><strong>Room & living</strong><small>18 listings</small></button>
+          <button class="category" data-category="Fashion"><span class="cat-icon pink">◇</span><strong>Fashion</strong><small>24 listings</small></button>
+        </div>
+        <div class="listing-header"><div><p class="eyebrow">FRESH ON THE BLOCK</p><h2>Latest listings</h2></div><label class="search"><span>⌕</span><input id="search-input" type="search" placeholder="Search listings..." /></label></div>
+        <div id="listing-grid" class="listing-grid"></div>
+      </section>
+
+      <section id="sell-view" class="view">
+        <div class="page-intro"><p class="eyebrow">TURN UNUSED INTO USEFUL</p><h1>Sell on campus.</h1><p>Reach verified IIM Indore buyers in minutes.</p></div>
+        <form id="sell-form" class="sell-layout">
+          <div class="form-card"><div class="form-heading"><span class="step">01</span><div><h2>Tell us about your item</h2><p>Be clear and honest — it helps your listing get noticed.</p></div></div><label>Item title<input required name="title" placeholder="e.g. Logitech MX Master 3S" /></label><div class="two-col"><label>Category<select name="category"><option>Electronics</option><option>Books</option><option>Furniture</option><option>Fashion</option><option>Other</option></select></label><label>Price (₹)<input required name="price" type="number" placeholder="e.g. 2500" /></label></div><label>Description<textarea name="description" rows="4" placeholder="Condition, age, reason for selling..."></textarea></label></div>
+          <div class="form-card"><div class="form-heading"><span class="step">02</span><div><h2>Add photos</h2><p>Listings with photos sell faster.</p></div></div><label class="upload-box"><input type="file" accept="image/*" /><span class="upload-icon">↑</span><strong>Drop a photo here</strong><small>or click to browse · JPG, PNG up to 5MB</small></label><button class="primary-button full" type="submit">Publish listing <span>↗</span></button></div>
+        </form>
+      </section>
+
+      <section id="orders-view" class="view"><div class="page-intro"><p class="eyebrow">KEEP TRACK OF IT ALL</p><h1>My orders.</h1><p>Your campus purchases, all in one place.</p></div><div class="empty-state"><span>◷</span><h2>No orders yet</h2><p>When you find something you love, your order will show up here.</p><button class="primary-button" data-view="buy">Browse listings <span>↗</span></button></div></section>
+      <footer><span>Made for the IIM Indore community</span><span>CampusBay © 2026</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
